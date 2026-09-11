@@ -1,15 +1,24 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, redirect } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import "./index.css";
 import Layout from "./layout/Layout";
+import Planets from "./pages/Planets";
 
 const router = createBrowserRouter([
   {
-    path: "/",
     Component: Layout,
-    children: [{}],
+    children: [
+      {
+        index: true,
+        loader: () => redirect("/Mercury"),
+      },
+      {
+        path: ":planetName",
+        Component: Planets,
+      },
+    ],
   },
 ]);
 
