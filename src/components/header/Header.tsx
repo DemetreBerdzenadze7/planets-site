@@ -4,6 +4,8 @@ const Header = () => {
   return (
     <header>
       <Navigation />
+
+      <hr className="border-white opacity-[0.1]" />
     </header>
   );
 };
