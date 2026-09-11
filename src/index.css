@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@import "tailwindcss";
+
+@theme {
+  --color-mercury: #419ebb;
+  --color-venus: #eda249;
+  --color-earth: #6d2ed5;
+  --color-mars: #d14c32;
+  --color-jupiter: #d83a34;
+  --color-saturn: #b87d43;
+  --color-uranus: #1ec1a2;
+  --color-neptune: #2d68f0;
+  --color-txt: #d8d8d8;
+  --font-menu: "League Spartan";
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  font-family: "Antonio", sans-serif;
+  background-color: #070724;
+  background-image: url("/images/background-stars.svg");
+}
