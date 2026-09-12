@@ -1,6 +1,6 @@
 import { tabs } from "./planetType";
 
-const PlanetTabs = () => {
+const PlanetTabsMobile = () => {
   return (
     <div className="md:hidden">
       <div className="flex items-center justify-between px-6">
@@ -18,4 +18,4 @@ const PlanetTabs = () => {
   );
 };
 
-export default PlanetTabs;
+export default PlanetTabsMobile;
