@@ -2,6 +2,7 @@ import PlanetTabs from "../components/planets/PlanetTabs";
 import { useParams } from "react-router";
 import data from "../data/data.json";
 import Container from "../container/Container";
+import PlanetHero from "../components/planets/PlanetHero";
 
 const Planets = () => {
   const { planetName } = useParams();
@@ -15,6 +16,7 @@ const Planets = () => {
   return (
     <Container>
       <PlanetTabs />
+      <PlanetHero planet={planet} />
     </Container>
   );
 };
