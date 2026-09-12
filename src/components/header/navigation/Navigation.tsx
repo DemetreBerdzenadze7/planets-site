@@ -8,7 +8,7 @@ const Navigation = () => {
   const [menu, setMenu] = useState<boolean>(false);
   return (
     <nav>
-      <Container>
+      <Container className="md:px-10">
         <div className="flex items-center justify-between md:flex-col lg:flex-row lg:justify-between">
           <h1 className="text-white uppercase text-[28px] leading-[1.3] tracking-[-1px]">
             the planets

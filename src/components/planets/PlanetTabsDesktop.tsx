@@ -6,7 +6,7 @@ const PlanetTabsDesktop = () => {
       {tabs.map((tab) => (
         <button
           key={tab}
-          className="py-2 px-5 text-white text-[9px] font-bold font-menu leading-[2.75] tracking-[2px] uppercase border border-white/15 cursor-pointer lg:text-[13px] hover:bg-txt/25 "
+          className="py-2 px-5 text-white text-[9px] font-bold font-menu leading-[2.75] tracking-[2px] uppercase border border-white/15 cursor-pointer lg:text-[13px] hover:bg-txt/25 text-left "
         >
           {tab}
         </button>

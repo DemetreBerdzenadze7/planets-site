@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import data from "../data/data.json";
 import Container from "../container/Container";
 import PlanetHero from "../components/planets/PlanetHero";
+import PlanetDescription from "../components/planets/PlanetDescription";
 
 const Planets = () => {
   const { planetName } = useParams();
@@ -14,9 +15,10 @@ const Planets = () => {
   }
 
   return (
-    <Container>
+    <Container className="md:px-10">
       <PlanetTabsMobile />
       <PlanetHero planet={planet} />
+      <PlanetDescription planet={planet} />
     </Container>
   );
 };
