@@ -1,7 +1,9 @@
+import { usePlanet } from "../../context/Context";
 import PlanetTabs from "./PlanetTabs";
 import type { Planet } from "./planetType";
 
 const PlanetHero = ({ planet }: { planet: Planet }) => {
+  const { activeTab } = usePlanet();
   return (
     <div className="flex flex-col items-center mt-15.75 lg:flex-row lg:justify-center">
       <img
@@ -16,7 +18,11 @@ const PlanetHero = ({ planet }: { planet: Planet }) => {
             {planet.name}
           </h1>
           <p className="text-[11px] leading-loose font-menu text-white text-center md:text-left lg:text-[15px]">
-            {planet.overview.content}
+            {activeTab === "overview"
+              ? planet.overview.content
+              : activeTab === "structure"
+                ? planet.structure
+                : planet.geology}
           </p>
 
           <div className="flex justify-center mt-2.5 md:justify-start md:mt-8 lg:mt-3">

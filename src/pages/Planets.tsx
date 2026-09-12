@@ -4,6 +4,7 @@ import data from "../data/data.json";
 import Container from "../container/Container";
 import PlanetHero from "../components/planets/PlanetHero";
 import PlanetDescription from "../components/planets/PlanetDescription";
+import { PlanetProvider } from "../context/Context";
 
 const Planets = () => {
   const { planetName } = useParams();
@@ -15,13 +16,15 @@ const Planets = () => {
   }
 
   return (
-    <Container className="md:px-10">
-      <div className="md:hidden">
-        <PlanetTabs />
-      </div>
-      <PlanetHero planet={planet} />
-      <PlanetDescription planet={planet} />
-    </Container>
+    <PlanetProvider>
+      <Container className="md:px-10">
+        <div className="md:hidden">
+          <PlanetTabs />
+        </div>
+        <PlanetHero planet={planet} />
+        <PlanetDescription planet={planet} />
+      </Container>
+    </PlanetProvider>
   );
 };
 

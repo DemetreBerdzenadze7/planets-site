@@ -6,6 +6,8 @@ export const tabs: TTabs = ["overview", "structure", "surface"];
 
 export type Planet = (typeof data)[0];
 
+export type ActiveTab = "overview" | "structure" | "surface";
+
 export const stats = [
   { label: "Rotation Time", key: "rotation" },
   { label: "Revolution Time", key: "revolution" },
