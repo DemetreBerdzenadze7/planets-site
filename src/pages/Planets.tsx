@@ -1,4 +1,4 @@
-import PlanetTabsMobile from "../components/planets/PlanetTabsMobile";
+import PlanetTabs from "../components/planets/PlanetTabs";
 import { useParams } from "react-router";
 import data from "../data/data.json";
 import Container from "../container/Container";
@@ -16,7 +16,9 @@ const Planets = () => {
 
   return (
     <Container className="md:px-10">
-      <PlanetTabsMobile />
+      <div className="md:hidden">
+        <PlanetTabs />
+      </div>
       <PlanetHero planet={planet} />
       <PlanetDescription planet={planet} />
     </Container>
