@@ -5,11 +5,27 @@ import type { Planet } from "./planetType";
 const PlanetHero = ({ planet }: { planet: Planet }) => {
   const { activeTab } = usePlanet();
   return (
-    <div className="flex flex-col items-center mt-15.75 lg:flex-row lg:justify-center">
+    <div className="flex flex-col relative items-center mt-15.75 lg:flex-row lg:justify-center">
       <img
-        src={planet.images.planet}
+        src={
+          activeTab === "overview"
+            ? planet.images.planet
+            : activeTab === "structure"
+              ? planet.images.internal
+              : planet.images.planet
+        }
         alt={planet.name}
         className="lg:w-[40%] md:mb-20"
+      />
+
+      <img
+        src={activeTab === "surface" ? planet.images.geology : undefined}
+        alt={planet.name}
+        className={
+          activeTab === "surface"
+            ? "block absolute w-20  top-50 lg:top-100 lg:left-48 lg:w-30"
+            : "hidden"
+        }
       />
 
       <div className="md:flex md:gap-17.25 md:items-center lg:flex-col lg:w-[55%] lg:gap-10">

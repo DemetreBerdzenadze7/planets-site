@@ -3,7 +3,7 @@ import { stats } from "./planetType";
 
 const PlanetDescription = ({ planet }: { planet: Planet }) => {
   return (
-    <div className="flex flex-col gap-2 mt-7 md:grid md:grid-cols-4 md:gap-2.75 lg:mt-22 ">
+    <div className="flex flex-col gap-2 mt-7 md:grid md:grid-cols-4 md:gap-2.75 lg:mt-15 ">
       {stats.map((stat) => (
         <div
           key={stat.key}
