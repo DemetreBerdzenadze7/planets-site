@@ -6,6 +6,7 @@ import { Link } from "react-router";
 
 const Navigation = () => {
   const [menu, setMenu] = useState<boolean>(false);
+
   return (
     <nav>
       <Container className="md:px-10">
@@ -22,6 +23,7 @@ const Navigation = () => {
           <div className="hidden md:flex md:items-center md:justify-between md:w-full md:mt-8 lg:w-[50%] lg:mt-0">
             {planetsNames.map((planet) => (
               <Link
+                key={planet.planetName}
                 to={planet.planetName}
                 className="text-white opacity-[0.75] font-menu text-[11px] font-bold leading-[2.25] uppercase tracking-[1px]"
               >
@@ -34,7 +36,7 @@ const Navigation = () => {
 
       {menu && (
         <div className="fixed inset-0 top-20 bg-[#070724] z-50 md:hidden">
-          <Menu />
+          <Menu setMenu={setMenu} />
         </div>
       )}
     </nav>

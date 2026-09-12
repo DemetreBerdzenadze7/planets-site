@@ -15,7 +15,7 @@ const PlanetHero = ({ planet }: { planet: Planet }) => {
               : planet.images.planet
         }
         alt={planet.name}
-        className="lg:w-[40%] md:mb-20"
+        className="w-60 lg:w-[40%] md:mb-20"
       />
 
       <img
@@ -23,7 +23,7 @@ const PlanetHero = ({ planet }: { planet: Planet }) => {
         alt={planet.name}
         className={
           activeTab === "surface"
-            ? "block absolute w-20  top-50 lg:top-100 lg:left-48 lg:w-30"
+            ? "block absolute w-20  top-50 lg:top-90 lg:left-48 lg:w-30"
             : "hidden"
         }
       />

@@ -1,13 +1,18 @@
 import { planetsNames } from "./menuTypes";
 import { Link } from "react-router";
 
-const Menu = () => {
+interface Menu {
+  setMenu: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Menu = ({ setMenu }: Menu) => {
   return (
     <div className="h-full max-w-3xl flex flex-col z-10 gap-6 p-6">
       {planetsNames.map((planet) => (
         <div key={planet.planetName}>
           <Link
             to={planet.planetName}
+            onClick={() => setMenu(false)}
             className="flex items-center justify-between"
           >
             <div className="flex items-center gap-6">
