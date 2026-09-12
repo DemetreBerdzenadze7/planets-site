@@ -21,7 +21,7 @@ const Menu = ({ setMenu }: Menu) => {
                 {planet.planetName}
               </span>
             </div>
-            <img src="/public/images/icon-chevron.svg" alt="Chevron" />
+            <img src="/images/icon-chevron.svg" alt="Chevron" />
           </Link>
           <hr className="border-white opacity-[0.1] mt-5" />
         </div>
